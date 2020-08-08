@@ -1,0 +1,56 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: table;
+}
+h1 {
+  color: blue;
+}
+
+header {
+  /* background-color: rgb(255, 193, 79); */
+  /* background-color: rgb(120, 51, 129); */
+  background-color: #580c1f;
+}
+
+header h1 {
+  color: white;
+}
+footer {
+  background-color: grey;
+  display: table-row;
+  height: 0;
+  text-align: center;
+}
+
+#links {
+  padding: 10px;
+  margin: 10px;
+}
+
+header a {
+  font-size: large;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #a51c30;
+}
+
+#main {
+  text-align: center;
+}
+
+img {
+  width: 200px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: large;
+  background-color: rgb(109, 204, 109);
+  border-radius: 5px;
+  border-color: rgb(109, 204, 109);
+}
