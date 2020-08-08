@@ -10,9 +10,13 @@
   <body>
     {{>header}}
     <div id="main">
-      <h1>Home Page of {{pageOwner}}</h1>
-      <p>Do the Right Thing!! {{msg}}</p>
-      <button id="btn">Click Me</button>
+      <h1>Home Page of {{ pageOwner }}</h1>
+      <p>Do the Right Thing!! {{ msg }}</p>
+      <form>
+        <input type="text" placeholder="Enter the location" />
+        <button id="btn">Get Weather</button>
+      </form>
+      <div id="weather-info"></div>
     </div>
     {{>footer}}
   </body>

@@ -18,7 +18,6 @@ const getLocation = (location, processResult) => {
       }
     }
 
-    console.log("in get mapbox : ");
     processResult(resultObj);
   });
 };
@@ -41,7 +40,6 @@ const getWeatherInfo = (coordinates, processResult) => {
         resultObj.error = res.body.error;
       }
     }
-    console.log("in get weatherstack : ");
     processResult(resultObj);
   });
 };

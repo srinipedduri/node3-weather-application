@@ -5,13 +5,12 @@ const getWeather = require("./geocode");
 
 console.log("my first express program");
 
+const port = process.env.PORT || 3000;
 const publicPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
 
 const app = express();
-
-console.log(__dirname);
 
 app.use(express.static(publicPath));
 
@@ -48,7 +47,7 @@ app.get("/help", (req, res) => {
 
 app.get("/weather", (req, res) => {
   if (!req.query.location) {
-    res.send({ error: true, msg: "location not provided" });
+    res.send({ error: "location not provided" });
   } else {
     getWeather(req.query.location, (result) => {
       if (result.error) {
@@ -65,6 +64,6 @@ app.get("/weather", (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("starting the server");
 });
